@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-blue)](https://garroshub.github.io/smart_money_planner_agent/)
 [![GitHub Repo stars](https://img.shields.io/github/stars/garroshub/smart_money_planner_agent?style=social)](https://github.com/garroshub/smart_money_planner_agent)
+[![Discussions](https://img.shields.io/github/discussions/garroshub/smart_money_planner_agent?color=blue)](https://github.com/garroshub/smart_money_planner_agent/discussions)
 
 Enterprise-level agentic framework for multi-account financial planning and strategy orchestration.
 
@@ -48,12 +49,6 @@ Use `.env` to configure Gemini:
 ```bash
 GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
 GEMINI_MODEL=gemini-3-flash-preview
-```
-
-## Quality
-
-```bash
-python -m pytest -q
 ```
 
 ## Star History
