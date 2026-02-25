@@ -56,6 +56,10 @@ GEMINI_MODEL=gemini-3-flash-preview
 python -m pytest -q
 ```
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=garroshub/smart_money_planner_agent&type=Date)](https://www.star-history.com/#garroshub/smart_money_planner_agent&Date)
+
 ## License
 
 MIT License.
