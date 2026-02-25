@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Money Planner</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <div class="brand">Smart Money Planner</div>
+        <nav class="nav-links">
+          <a href="#demo">Interactive Demo</a>
+          <a href="#how">How it works</a>
+          <a href="#data">Mock data</a>
+        </nav>
+        <span class="pill">Static demo</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Rules + Agent</p>
+          <h1>See agentic finance planning with a static, transparent demo.</h1>
+          <p class="lead">
+            Rules mode runs in your browser. Agent mode uses curated presets so anyone can
+            explore the flow with zero setup or API keys.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#demo">Try the demo</a>
+            <a class="btn ghost" href="#how">View pipeline</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <p class="card-title">Pipeline preview</p>
+            <ul>
+              <li>Goal parsing</li>
+              <li>Plan generation</li>
+              <li>Scoring + guardrails</li>
+              <li>Markdown explanation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="page-main" id="demo">
+      <div class="wrap">
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Interactive demo</h2>
+            <p>Rules mode runs locally. Agent mode uses preset outputs.</p>
+          </div>
+          <div class="control-grid">
+            <div class="control">
+              <label for="modeSelect">Mode</label>
+              <select id="modeSelect">
+                <option value="rules">Rules (live)</option>
+                <option value="agent">Agent (preset)</option>
+              </select>
+            </div>
+            <div class="control">
+              <label for="personaSelect">Persona</label>
+              <select id="personaSelect"></select>
+            </div>
+            <div class="control">
+              <label for="presetSelect">Preset example</label>
+              <select id="presetSelect"></select>
+            </div>
+            <div class="control full">
+              <label for="goalInput">Goals text</label>
+              <textarea id="goalInput" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="action-row">
+            <button class="btn primary" id="runBtn">Run demo</button>
+            <span id="modeHint" class="hint"></span>
+          </div>
+          <p id="presetNotice" class="hint"></p>
+        </section>
+
+        <div id="resultsSection" class="results-hidden">
+        <section class="panel">
+          <div id="traceOutput" class="trace"></div>
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <span>Net worth</span>
+              <strong id="kpiNetWorth"></strong>
+            </div>
+            <div class="kpi-card">
+              <span>Monthly cash flow</span>
+              <strong id="kpiCashFlow"></strong>
+            </div>
+            <div class="kpi-card">
+              <span>Emergency target</span>
+              <strong id="kpiEmergencyTarget"></strong>
+            </div>
+            <div class="kpi-card">
+              <span>Emergency progress</span>
+              <strong id="kpiEmergencyProgress"></strong>
+            </div>
+            <div class="kpi-card">
+              <span>Debt total</span>
+              <strong id="kpiDebtTotal"></strong>
+            </div>
+            <div class="kpi-card">
+              <span>Weighted APR</span>
+              <strong id="kpiWeightedApr"></strong>
+            </div>
+          </div>
+          <p id="kpiCaption" class="hint"></p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Plan comparison</h3>
+          </div>
+          <div class="table-wrap">
+            <table class="plan-table" id="planTable">
+              <thead>
+                <tr>
+                  <th>Plan</th>
+                  <th>Score</th>
+                  <th>Emergency</th>
+                  <th>Debt</th>
+                  <th>Invest</th>
+                  <th>Allocation total</th>
+                  <th>Budget utilization</th>
+                  <th>Approval actions</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel output-grid">
+          <div class="output-card">
+            <h3>Allocation by plan</h3>
+            <div id="allocationChart" class="bar-stack"></div>
+          </div>
+          <div class="output-card">
+            <h3>Balance sheet</h3>
+            <div id="balanceChart" class="bar-list"></div>
+          </div>
+          <div class="output-card">
+            <h3>Debt stress</h3>
+            <div id="debtChart" class="bar-list"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Recommendation</h3>
+          </div>
+          <div id="recommendationOutput" class="recommendation"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Narrative</h3>
+          </div>
+          <div id="narrativeOutput" class="narrative"></div>
+        </section>
+        </div>
+      </div>
+    </main>
+
+    <section class="page-main" id="how">
+      <div class="wrap">
+        <h2>How the pipeline works</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>1. Parse goals</h3>
+            <p>Extract constraints from natural language input.</p>
+          </div>
+          <div class="feature-card">
+            <h3>2. Generate plans</h3>
+            <p>Create 2-3 candidate action sets using rules.</p>
+          </div>
+          <div class="feature-card">
+            <h3>3. Score + guardrails</h3>
+            <p>Score by risk and debt focus, then enforce constraints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-main" id="data">
+      <div class="wrap">
+        <h2>Mock data</h2>
+        <p>All personas and accounts are JSON fixtures bundled with the demo.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <p>Built for GitHub Pages. Rules run locally; Agent results are presets.</p>
+        <p>Smart Money Planner demo</p>
+      </div>
+    </footer>
+
+    <script src="assets/rules_engine.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

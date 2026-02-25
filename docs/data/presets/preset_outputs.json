@@ -1,0 +1,358 @@
+[
+  {
+    "id": "preset_rules_debt_focus",
+    "mode": "agent",
+    "user_id": "u_001",
+    "label": "Debt focus + emergency fund",
+    "input_goals_text": "Pay down credit card debt quickly while building a small emergency fund.",
+    "constraints": {
+      "min_emergency_fund_months": 3,
+      "focus_debt_reduction": true,
+      "risk_tolerance": "high",
+      "priority_order": ["debt", "emergency_fund", "invest"],
+      "time_horizon_months": 12,
+      "must_avoid": [],
+      "conflicts": []
+    },
+    "plans": [
+      {
+        "name": "Debt focus",
+        "score": 82,
+        "actions": [
+          {"type": "Emergency fund", "amount": 150, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 250, "requires_human_approval": true},
+          {"type": "Invest", "amount": 50, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Balanced",
+        "score": 74,
+        "actions": [
+          {"type": "Emergency fund", "amount": 100, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 200, "requires_human_approval": true},
+          {"type": "Invest", "amount": 75, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Growth focus",
+        "score": 68,
+        "actions": [
+          {"type": "Emergency fund", "amount": 50, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 150, "requires_human_approval": true},
+          {"type": "Invest", "amount": 150, "requires_human_approval": true}
+        ]
+      }
+    ],
+    "markdown_output": "### Plan 1 (Score: 82)\n\n**This month:**\n- Build emergency fund: 150\n- Pay credit card: 250\n\n**Why:**\n- Priority: debt reduction\n- Risk tolerance: high\n\n### Plan 2 (Score: 74)\n\n**This month:**\n- Pay credit card: 350\n- Hold cash: 50\n\n**Why:**\n- Priority: debt reduction\n- Risk tolerance: high"
+  },
+  {
+    "id": "preset_balanced_growth",
+    "mode": "agent",
+    "user_id": "u_003",
+    "label": "Balanced growth + emergency fund",
+    "input_goals_text": "Grow investments but keep a 3-month emergency fund.",
+    "constraints": {
+      "min_emergency_fund_months": 3,
+      "focus_debt_reduction": false,
+      "risk_tolerance": "medium",
+      "priority_order": ["emergency_fund", "invest", "debt"],
+      "time_horizon_months": 18,
+      "must_avoid": [],
+      "conflicts": []
+    },
+    "plans": [
+      {
+        "name": "Balanced",
+        "score": 88,
+        "actions": [
+          {"type": "Emergency fund", "amount": 400, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 150, "requires_human_approval": true},
+          {"type": "Invest", "amount": 300, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Conservative",
+        "score": 79,
+        "actions": [
+          {"type": "Emergency fund", "amount": 250, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 150, "requires_human_approval": true},
+          {"type": "Invest", "amount": 200, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Growth focus",
+        "score": 70,
+        "actions": [
+          {"type": "Emergency fund", "amount": 150, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 100, "requires_human_approval": true},
+          {"type": "Invest", "amount": 450, "requires_human_approval": true}
+        ]
+      }
+    ],
+    "markdown_output": "### Plan 1 (Score: 88)\n\n**This month:**\n- Emergency fund: 400\n- Invest (balanced): 300\n\n**Why:**\n- Priority: stability + growth\n- Risk tolerance: medium\n\n### Plan 2 (Score: 79)\n\n**This month:**\n- Emergency fund: 250\n- Invest (conservative): 200\n\n**Why:**\n- Priority: safety first\n- Risk tolerance: medium"
+  },
+  {
+    "id": "preset_low_volatility",
+    "mode": "agent",
+    "user_id": "u_004",
+    "label": "Low volatility income",
+    "input_goals_text": "Preserve capital with low volatility.",
+    "constraints": {
+      "min_emergency_fund_months": 6,
+      "focus_debt_reduction": false,
+      "risk_tolerance": "low",
+      "priority_order": ["emergency_fund", "capital_preservation", "income"],
+      "time_horizon_months": 24,
+      "must_avoid": ["high_volatility"],
+      "conflicts": []
+    },
+    "plans": [
+      {
+        "name": "Capital preservation",
+        "score": 90,
+        "actions": [
+          {"type": "Emergency fund", "amount": 300, "requires_human_approval": false},
+          {"type": "Invest", "amount": 200, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Income focus",
+        "score": 82,
+        "actions": [
+          {"type": "Emergency fund", "amount": 250, "requires_human_approval": false},
+          {"type": "Invest", "amount": 250, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Liquidity first",
+        "score": 75,
+        "actions": [
+          {"type": "Emergency fund", "amount": 400, "requires_human_approval": false},
+          {"type": "Invest", "amount": 100, "requires_human_approval": true}
+        ]
+      }
+    ],
+    "markdown_output": "### Plan 1 (Score: 90)\n\n**This month:**\n- Hold cash buffer: 300\n- Allocate to low-risk income: 200\n\n**Why:**\n- Priority: capital preservation\n- Risk tolerance: low"
+  },
+  {
+    "id": "preset_zero_income",
+    "mode": "agent",
+    "user_id": "u_005",
+    "label": "Zero income survival",
+    "input_goals_text": "Cover essentials with zero income and avoid new debt.",
+    "constraints": {
+      "min_emergency_fund_months": 3,
+      "focus_debt_reduction": true,
+      "risk_tolerance": "low",
+      "priority_order": ["cash_flow", "debt", "emergency_fund"],
+      "time_horizon_months": 6,
+      "must_avoid": ["new_debt"],
+      "conflicts": []
+    },
+    "plans": [
+      {
+        "name": "Stabilize cash",
+        "score": 76,
+        "actions": [
+          {"type": "Emergency fund", "amount": 50, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 200, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Minimums only",
+        "score": 68,
+        "actions": [
+          {"type": "Debt payment", "amount": 150, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Cash buffer",
+        "score": 60,
+        "actions": [
+          {"type": "Emergency fund", "amount": 120, "requires_human_approval": false}
+        ]
+      }
+    ],
+    "markdown_output": "### Plan 1 (Score: 76)\n\n**This month:**\n- Freeze discretionary spend\n- Pay minimums only\n\n**Why:**\n- Priority: stabilize cash flow\n- Risk tolerance: low"
+  },
+  {
+    "id": "preset_conflicting_goals",
+    "mode": "agent",
+    "user_id": "u_007",
+    "label": "High return with no risk",
+    "input_goals_text": "I want high returns with no volatility and no risk.",
+    "constraints": {
+      "min_emergency_fund_months": 3,
+      "focus_debt_reduction": false,
+      "risk_tolerance": "high",
+      "priority_order": ["invest", "emergency_fund", "debt"],
+      "time_horizon_months": 12,
+      "must_avoid": ["high_volatility"],
+      "conflicts": ["high_return_with_no_risk"]
+    },
+    "plans": [
+      {
+        "name": "Balanced risk",
+        "score": 60,
+        "actions": [
+          {"type": "Emergency fund", "amount": 300, "requires_human_approval": false},
+          {"type": "Invest", "amount": 100, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Risk managed growth",
+        "score": 56,
+        "actions": [
+          {"type": "Emergency fund", "amount": 200, "requires_human_approval": false},
+          {"type": "Invest", "amount": 200, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Conservative buffer",
+        "score": 52,
+        "actions": [
+          {"type": "Emergency fund", "amount": 350, "requires_human_approval": false}
+        ]
+      }
+    ],
+    "markdown_output": "### Plan 1 (Score: 60)\n\n**This month:**\n- Build emergency fund: 300\n- Invest in low-volatility assets: 100\n\n**Why:**\n- Conflicting goals require trade-offs\n- Risk tolerance: high"
+  },
+  {
+    "id": "preset_mortgage_stability",
+    "mode": "agent",
+    "user_id": "u_002",
+    "label": "Mortgage stability and debt control",
+    "input_goals_text": "Keep mortgage payments stable and reduce high-interest debt.",
+    "constraints": {
+      "min_emergency_fund_months": 3,
+      "focus_debt_reduction": true,
+      "risk_tolerance": "medium",
+      "priority_order": ["debt", "cash_flow", "invest"],
+      "time_horizon_months": 18,
+      "must_avoid": ["new_debt"],
+      "conflicts": []
+    },
+    "plans": [
+      {
+        "name": "Debt focus",
+        "score": 84,
+        "actions": [
+          {"type": "Emergency fund", "amount": 75, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 240, "requires_human_approval": true},
+          {"type": "Invest", "amount": 60, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Balanced",
+        "score": 76,
+        "actions": [
+          {"type": "Emergency fund", "amount": 90, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 180, "requires_human_approval": true},
+          {"type": "Invest", "amount": 90, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Growth focus",
+        "score": 66,
+        "actions": [
+          {"type": "Emergency fund", "amount": 60, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 140, "requires_human_approval": true},
+          {"type": "Invest", "amount": 130, "requires_human_approval": true}
+        ]
+      }
+    ],
+    "markdown_output": "### Overview\nThe client is managing negative monthly cash flow while carrying mortgage and revolving debt.\n\n### Plans\n- Debt Focus prioritizes high-interest balances while maintaining a minimum emergency buffer.\n- Balanced spreads monthly surplus across debt reduction and long-term investing.\n- Growth Focus increases investing but leaves slower debt progress.\n\n### Recommendation\nDebt Focus is recommended due to strong debt reduction and payment stability.\n\n### Risks\n- Ongoing cash-flow pressure may require expense cuts to keep plan execution stable."
+  },
+  {
+    "id": "preset_high_income_scaling",
+    "mode": "agent",
+    "user_id": "u_006",
+    "label": "Scale wealth with controlled risk",
+    "input_goals_text": "Maximize long-term returns but avoid large drawdowns and keep an emergency fund.",
+    "constraints": {
+      "min_emergency_fund_months": 4,
+      "focus_debt_reduction": false,
+      "risk_tolerance": "medium",
+      "priority_order": ["invest", "emergency_fund", "debt"],
+      "time_horizon_months": 36,
+      "must_avoid": ["high_drawdown"],
+      "conflicts": []
+    },
+    "plans": [
+      {
+        "name": "Balanced",
+        "score": 91,
+        "actions": [
+          {"type": "Emergency fund", "amount": 600, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 900, "requires_human_approval": true},
+          {"type": "Invest", "amount": 2100, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Growth focus",
+        "score": 86,
+        "actions": [
+          {"type": "Emergency fund", "amount": 450, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 700, "requires_human_approval": true},
+          {"type": "Invest", "amount": 2500, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Debt focus",
+        "score": 72,
+        "actions": [
+          {"type": "Emergency fund", "amount": 700, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 1300, "requires_human_approval": true},
+          {"type": "Invest", "amount": 1500, "requires_human_approval": true}
+        ]
+      }
+    ],
+    "markdown_output": "### Overview\nThe client has strong monthly surplus and a large investment base, allowing growth-first execution with risk controls.\n\n### Plans\n- Balanced offers high investment allocation with adequate emergency reserves.\n- Growth Focus increases return potential but raises volatility exposure.\n- Debt Focus accelerates liabilities at the cost of long-term growth.\n\n### Recommendation\nBalanced is recommended for best risk-adjusted growth and liquidity protection.\n\n### Risks\n- Concentrated market exposure can still produce temporary drawdowns despite diversification."
+  },
+  {
+    "id": "preset_early_career_loans",
+    "mode": "agent",
+    "user_id": "u_008",
+    "label": "Student loan payoff with education savings",
+    "input_goals_text": "Pay off student loans and save for a dependent's education.",
+    "constraints": {
+      "min_emergency_fund_months": 3,
+      "focus_debt_reduction": true,
+      "risk_tolerance": "high",
+      "priority_order": ["debt", "education", "invest"],
+      "time_horizon_months": 24,
+      "must_avoid": ["new_debt"],
+      "conflicts": []
+    },
+    "plans": [
+      {
+        "name": "Debt focus",
+        "score": 88,
+        "actions": [
+          {"type": "Emergency fund", "amount": 200, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 600, "requires_human_approval": true},
+          {"type": "Invest", "amount": 250, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Balanced",
+        "score": 79,
+        "actions": [
+          {"type": "Emergency fund", "amount": 250, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 450, "requires_human_approval": true},
+          {"type": "Invest", "amount": 350, "requires_human_approval": true}
+        ]
+      },
+      {
+        "name": "Growth focus",
+        "score": 68,
+        "actions": [
+          {"type": "Emergency fund", "amount": 150, "requires_human_approval": false},
+          {"type": "Debt payment", "amount": 300, "requires_human_approval": true},
+          {"type": "Invest", "amount": 500, "requires_human_approval": true}
+        ]
+      }
+    ],
+    "markdown_output": "### Overview\nThe client has high surplus potential and a clear debt-plus-education objective.\n\n### Plans\n- Debt Focus accelerates student loan reduction while still building savings.\n- Balanced keeps debt progress and education investing in parallel.\n- Growth Focus prioritizes investment growth with slower loan payoff.\n\n### Recommendation\nDebt Focus is recommended to reduce interest drag early while preserving progress toward education goals.\n\n### Risks\n- Over-allocating to investment too early can delay debt payoff and increase interest burden."
+  }
+]

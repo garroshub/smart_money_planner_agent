@@ -1,0 +1,74 @@
+[
+  {
+    "id": "u_001",
+    "age": 22,
+    "risk_tolerance": "high",
+    "income_monthly": 1000,
+    "expenses_monthly": 750,
+    "dependents": 0,
+    "region": "northeast"
+  },
+  {
+    "id": "u_002",
+    "age": 35,
+    "risk_tolerance": "medium",
+    "income_monthly": 3200,
+    "expenses_monthly": 4100,
+    "dependents": 2,
+    "region": "southeast"
+  },
+  {
+    "id": "u_003",
+    "age": 41,
+    "risk_tolerance": "medium",
+    "income_monthly": 6200,
+    "expenses_monthly": 3000,
+    "dependents": 1,
+    "region": "midwest"
+  },
+  {
+    "id": "u_004",
+    "age": 67,
+    "risk_tolerance": "low",
+    "income_monthly": 2200,
+    "expenses_monthly": 2000,
+    "dependents": 0,
+    "region": "west"
+  },
+  {
+    "id": "u_005",
+    "age": 29,
+    "risk_tolerance": "low",
+    "income_monthly": 0,
+    "expenses_monthly": 1200,
+    "dependents": 0,
+    "region": "central"
+  },
+  {
+    "id": "u_006",
+    "age": 52,
+    "risk_tolerance": "medium",
+    "income_monthly": 17500,
+    "expenses_monthly": 7900,
+    "dependents": 3,
+    "region": "southwest"
+  },
+  {
+    "id": "u_007",
+    "age": 45,
+    "risk_tolerance": "high",
+    "income_monthly": 8200,
+    "expenses_monthly": 9000,
+    "dependents": 0,
+    "region": "northwest"
+  },
+  {
+    "id": "u_008",
+    "age": 19,
+    "risk_tolerance": "high",
+    "income_monthly": 1800,
+    "expenses_monthly": 600,
+    "dependents": 1,
+    "region": "northeast"
+  }
+]

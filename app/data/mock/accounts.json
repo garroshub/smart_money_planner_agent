@@ -1,0 +1,194 @@
+[
+  {
+    "user_id": "u_001",
+    "cash": 850.5,
+    "debts": [
+      {
+        "type": "credit_card",
+        "balance": 420,
+        "apr": 0.199,
+        "min_payment": 25
+      },
+      {
+        "type": "student_loan",
+        "balance": 12400,
+        "apr": 0.047,
+        "min_payment": 140
+      }
+    ],
+    "investments": [
+      {
+        "type": "roth_ira",
+        "balance": 1800
+      }
+    ]
+  },
+  {
+    "user_id": "u_002",
+    "cash": 320.75,
+    "debts": [
+      {
+        "type": "mortgage",
+        "balance": 248000,
+        "apr": 0.0615,
+        "min_payment": 1580
+      },
+      {
+        "type": "auto_loan",
+        "balance": 9800,
+        "apr": 0.064,
+        "min_payment": 240
+      },
+      {
+        "type": "credit_card",
+        "balance": 2100,
+        "apr": 0.219,
+        "min_payment": 65
+      }
+    ],
+    "investments": [
+      {
+        "type": "401k",
+        "balance": 42000
+      },
+      {
+        "type": "brokerage",
+        "balance": 5200
+      }
+    ]
+  },
+  {
+    "user_id": "u_003",
+    "cash": 6400,
+    "debts": [
+      {
+        "type": "mortgage",
+        "balance": 182000,
+        "apr": 0.058,
+        "min_payment": 1220
+      }
+    ],
+    "investments": [
+      {
+        "type": "401k",
+        "balance": 118000
+      },
+      {
+        "type": "brokerage",
+        "balance": 24000
+      },
+      {
+        "type": "529_plan",
+        "balance": 6200
+      }
+    ]
+  },
+  {
+    "user_id": "u_004",
+    "cash": 5200,
+    "debts": [],
+    "investments": [
+      {
+        "type": "ira",
+        "balance": 86000
+      },
+      {
+        "type": "cds",
+        "balance": 15000
+      }
+    ]
+  },
+  {
+    "user_id": "u_005",
+    "cash": 0,
+    "debts": [
+      {
+        "type": "credit_card",
+        "balance": 3600,
+        "apr": 0.238,
+        "min_payment": 110
+      },
+      {
+        "type": "personal_loan",
+        "balance": 12000,
+        "apr": 0.112,
+        "min_payment": 280
+      }
+    ],
+    "investments": []
+  },
+  {
+    "user_id": "u_006",
+    "cash": 22000,
+    "debts": [
+      {
+        "type": "mortgage",
+        "balance": 410000,
+        "apr": 0.054,
+        "min_payment": 2320
+      },
+      {
+        "type": "auto_loan",
+        "balance": 18000,
+        "apr": 0.059,
+        "min_payment": 360
+      }
+    ],
+    "investments": [
+      {
+        "type": "401k",
+        "balance": 320000
+      },
+      {
+        "type": "brokerage",
+        "balance": 145000.75
+      },
+      {
+        "type": "hsa",
+        "balance": 18000
+      }
+    ]
+  },
+  {
+    "user_id": "u_007",
+    "cash": 900,
+    "debts": [
+      {
+        "type": "credit_card",
+        "balance": 0,
+        "apr": 0.0,
+        "min_payment": 0
+      },
+      {
+        "type": "auto_loan",
+        "balance": 7400,
+        "apr": 0.068,
+        "min_payment": 190
+      }
+    ],
+    "investments": [
+      {
+        "type": "brokerage",
+        "balance": 38000
+      }
+    ]
+  },
+  {
+    "user_id": "u_008",
+    "cash": 1200,
+    "debts": [
+      {
+        "type": "student_loan",
+        "balance": 5600,
+        "apr": 0.041,
+        "min_payment": 75
+      }
+    ],
+    "investments": [
+      {
+        "type": "roth_ira",
+        "balance": 0
+      }
+    ]
+  }
+]
