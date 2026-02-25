@@ -1,10 +1,10 @@
-# Smart Money Planner
+# Smart Money Planner Agent
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-blue)](https://garroshub.github.io/smart_money_planner/)
-[![GitHub Repo stars](https://img.shields.io/github/stars/garroshub/smart_money_planner?style=social)](https://github.com/garroshub/smart_money_planner)
+[![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-blue)](https://garroshub.github.io/smart_money_planner_agent/)
+[![GitHub Repo stars](https://img.shields.io/github/stars/garroshub/smart_money_planner_agent?style=social)](https://github.com/garroshub/smart_money_planner_agent)
 
-Enterprise-grade financial planning demo for multi-account analysis and strategy generation.
+Enterprise-level agentic framework for multi-account financial planning and strategy orchestration.
 
 ## Business Scenario
 
